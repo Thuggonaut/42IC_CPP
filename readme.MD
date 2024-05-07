@@ -138,13 +138,13 @@ void Car::displayInfo() const {
 
 | 🔸 **Library** | Use |
 | --- | --- |
-| <iostream> | For Input/output operations <br>Provides standard input/output streams |
-| <cstring> |  Functions for string manipulation |
+| `<iostream>` | For Input/output operations <br>Provides standard input/output streams |
+| `<cstring>` |  Functions for string manipulation |
 
 
 | 🔸 **Object** | Library | Use |
 | --- | --- | --- |
-| std::cout | <iostream.h> | Output text to the standard output device/console <br>`<<` to write, e.g.: <br>`std::cout << "Hello, World!";` |
+| std::cout | `<iostream>` | Output text to the standard output device/console <br>`<<` to write, e.g.: <br>`std::cout << "Hello, World!";` |
 
 | 🔸 **Class** | Library | Use |
 | --- | --- | --- |
@@ -153,6 +153,3 @@ void Car::displayInfo() const {
 | 🔸 **Function** | Library | Use |
 | --- | --- | --- |
 
-
-| 🔸***FILE I/O*** | | |
-| open() | <fcntl.h> <br>`int open(const char *pathname, int flags);` | Open or create a file and obtain a file descriptor (fd) or -1 on failure. |
