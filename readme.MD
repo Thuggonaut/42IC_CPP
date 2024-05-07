@@ -12,7 +12,7 @@
 	- Files containing class code will always be named according to the class name.
 	- For instance: `ClassName.hpp/ClassName.h`, `ClassName.cpp`, or `ClassName.tpp`. 
 	- For instance, if a class is named BrickWall, the corresponding files should be named BrickWall.hpp, BrickWall.cpp, or BrickWall.tpp.
-- Unless specified, every `output messages must be ended by a \n` and `displayed to the console`.
+- Unless specified, every `output message must be ended by a \n` and `displayed to the console`.
 - Goodbye Norminette!
 - **PERMITTED:**
 	- The standard library.
@@ -140,11 +140,16 @@ void Car::displayInfo() const {
 | --- | --- |
 | `<iostream>` | For Input/output operations <br>Provides standard input/output streams |
 | `<cstring>` |  Functions for string manipulation |
+| `<cctype>` | Functions for testing and manipulating individual characters e.g. `isalpha`, `toupper` etc. |
 
 
 | 🔸 **Object** | Library | Use |
 | --- | --- | --- |
-| std::cout | `<iostream>` | Output text to the standard output device/console <br>`<<` to write, e.g.: <br>`std::cout << "Hello, World!";` |
+| `std::cout` | `<iostream>` | Output text to the standard output/console <br>`<<` to write to, e.g.: <br>`std::cout << "Hello, World!";` |
+| `std::cin` | `<iostream>` | Read input from the standard input/keyboard <br>`>>` to read data from, e.g.: <br>`std::cin >> variable;` |
+| `std::endl` | `<iostream>` | Insert a newline character `\n` to the output stream then flush the stream/output buffer |
+
+
 
 | 🔸 **Class** | Library | Use |
 | --- | --- | --- |

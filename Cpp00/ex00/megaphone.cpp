@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstring> //String manipulation
-#include <cctype>
+#include <cctype> //Test/manipulate characters
 
 //Read Command-line Arguments
 	//Check Argument Count: at least one argument is provided. If not, print message and exit
