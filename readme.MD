@@ -152,3 +152,7 @@ void Car::displayInfo() const {
 
 | 🔸 **Function** | Library | Use |
 | --- | --- | --- |
+
+| --- | --- | --- |
+| 🔸***FILE I/O*** | | |
+| open() | <fcntl.h> <br>`int open(const char *pathname, int flags);` | Open or create a file and obtain a file descriptor (fd) or -1 on failure. |
