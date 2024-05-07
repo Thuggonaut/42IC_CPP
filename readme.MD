@@ -7,12 +7,12 @@
 
 # General rules:
 - Must comply with `C++ 98 standard`.
-- Compile with `c++` and the flags `-std=c++98 -Wall -Wextra -Werror`.
+- Compile with `g++` and the flags `-std=c++98 -Wall -Wextra -Werror`.
 - Write `class names in UpperCamelCase` format.
 	- Files containing class code will always be named according to the class name.
 	- For instance: `ClassName.hpp/ClassName.h`, `ClassName.cpp`, or `ClassName.tpp`. 
 	- For instance, if a class is named BrickWall, the corresponding files should be named BrickWall.hpp, BrickWall.cpp, or BrickWall.tpp.
-- Unless specified, every `output messages must be ended by a \n` and `displayed to the STDOUT`.
+- Unless specified, every `output messages must be ended by a \n` and `displayed to the console`.
 - Goodbye Norminette!
 - **PERMITTED:**
 	- The standard library.
@@ -135,3 +135,20 @@ void Car::displayInfo() const {
     std::cout << "Year: " << year << "\n";
 }
 ```
+
+| 🔸 **Library** | Use |
+| --- | --- |
+| <iostream> | For Input/output operations <br>Provides standard input/output streams |
+| <cstring> |  Functions for string manipulation |
+
+
+| 🔸 **Object** | Library | Use |
+| --- | --- | --- |
+| std::cout | <iostream> | Output text to the standard output device/console <br>`<<` to write, e.g.: <br>`std::cout << "Hello, World!";` |
+
+| 🔸 **Class** | Library | Use |
+| --- | --- | --- |
+
+
+| 🔸 **Function** | Library | Use |
+| --- | --- | --- |
