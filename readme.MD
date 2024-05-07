@@ -144,7 +144,7 @@ void Car::displayInfo() const {
 
 | 🔸 **Object** | Library | Use |
 | --- | --- | --- |
-| std::cout | <iostream> | Output text to the standard output device/console <br>`<<` to write, e.g.: <br>`std::cout << "Hello, World!";` |
+| std::cout | <iostream.h> | Output text to the standard output device/console <br>`<<` to write, e.g.: <br>`std::cout << "Hello, World!";` |
 
 | 🔸 **Class** | Library | Use |
 | --- | --- | --- |
