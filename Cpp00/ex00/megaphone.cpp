@@ -6,15 +6,18 @@
 int	main(int argc, char **argv)
 {
 	//Check Argument Count: at least one argument is provided. If not, print message and exit
-	if (argc > 1)
+	if (argc >= 2)
 	{
-		//Concatenate Arguments into a single string
-		
-		
-		//Convert to Uppercase
-		//Print to the console
+		char *res;
+
+		while (argc >= 2)
+		{
+			//Concatenate Arguments into a single string
+			//Doesn't print double quotes: a string can be enclosed in quotes or without
+			//Convert to Uppercase
+			//Print to the console
 	}
 	else
-		std::cout << "Error: Please enter message after <./megaphone>" std::endl;
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" std::endl;
 	return (0);
 }
