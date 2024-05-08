@@ -16,6 +16,7 @@ int	main(int argc, char **argv)
 			//Doesn't print double quotes: a string can be enclosed in quotes or without
 			//Convert to Uppercase
 			//Print to the console
+		}
 	}
 	else
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" std::endl;
