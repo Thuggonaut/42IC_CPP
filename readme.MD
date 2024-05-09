@@ -139,12 +139,23 @@ void Car::displayInfo() const {
 | 🔸 **Library** | Header | Use |
 | --- | --- | --- |
 | Input/Output Streams | `<iostream>` | For Input/output operations <br>Provides standard input/output streams |
-| Iterators | `<iterator>` | Classes and functions for working with iterators. <br>Provides a access to elements in a sequence |
+| File I/O | `<fstream>` | File stream operations for reading from and writing to files |
 | Character handling | `<cctype>` | Functions for testing and manipulating individual characters e.g. `isalpha`, `toupper` etc. |
+| Error Handling | `<stdexcept>` | Standard exceptions and error handling |
+| Manipulators | `<iomanip>` | Input/output manipulators for controlling formatting |
 | Numerics | `<cmath>` | Mathematical functions like `sin`, `cos`, `sqrt`, etc |
-| | `<random>` | Random number generation utilities |
-| | `<numeric>` | Numeric operations like `std::accumulate`, `std::inner_product`, etc |
-| `<cstring>` |  Functions for string manipulation from the C library where <string> is forbidden|
+| Utility | `<random>` | Random number generation utilities |
+| Time and Date | `<ctime>` | Date and time functions |
+|  | `<chrono>` | Time utilities for measuring time intervals and durations |
+| C Standard Library Headers | `<cstdio>` | |
+|  | `<cstdlib>  `|  |
+| | `<cstring>` | <string> is forbidden |
+| **Forbidden (STL)** | | |
+| Iterators | `<iterator>` | Classes and functions for working with iterators. <br>Provides a access to elements in a sequence |
+| Memory Management | `<memory>` | Utilities for compile-time type introspection |
+| Regular Expressions | `<regex>` | Regular expression support |
+| Functional | `<functional>` | Function objects and utilities for working with functions |
+| Utilities | `<utility>`| Miscellaneous utility components such as `std::pair`, `std::move`, etc |
 
 
 ***NOTE: When using elements or calling functions from the C++ Standard Library, we need to prefix it with a `std::`***
