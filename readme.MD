@@ -136,19 +136,23 @@ void Car::displayInfo() const {
 }
 ```
 
-| 🔸 **Library** | Use |
-| --- | --- |
-| `<iostream>` | For Input/output operations <br>Provides standard input/output streams |
-| `<cstring>` |  Functions for string manipulation |
-| `<cctype>` | Functions for testing and manipulating individual characters e.g. `isalpha`, `toupper` etc. |
+| 🔸 **Library** | Header | Use |
+| --- | --- | --- |
+| Input/Output Streams | `<iostream>` | For Input/output operations <br>Provides standard input/output streams |
+| Iterators | `<iterator>` | Classes and functions for working with iterators. <br>Provides a access to elements in a sequence |
+| Character handling | `<cctype>` | Functions for testing and manipulating individual characters e.g. `isalpha`, `toupper` etc. |
+| Numerics | `<cmath>` <br>`<random>` <br>`<numeric>` | Mathematical functions like `sin`, `cos`, `sqrt`, etc <br>Random number generation utilities <br>Numeric operations like `std::accumulate`, `std::inner_product`, etc |
+| `<cstring>` |  Functions for string manipulation from the C library where <string> is forbidden|
 
+
+***NOTE: When using elements or calling functions from the C++ Standard Library, we need to prefix it with a `std::`***
 
 | 🔸 **Object** | Library | Use |
 | --- | --- | --- |
 | `std::cout` | `<iostream>` | Output text to the standard output/console <br>`<<` to write to, e.g.: <br>`std::cout << "Hello, World!";` |
 | `std::cin` | `<iostream>` | Read input from the standard input/keyboard <br>`>>` to read data from, e.g.: <br>`std::cin >> variable;` |
+| `std::cerr` | `<iostream>` | |
 | `std::endl` | `<iostream>` | Insert a newline character `\n` to the output stream then flush the stream/output buffer |
-
 
 
 | 🔸 **Class** | Library | Use |
