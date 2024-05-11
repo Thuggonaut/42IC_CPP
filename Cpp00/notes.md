@@ -33,9 +33,17 @@
 - A phonebook contact
 
 🧐 ***What is a class?***
+- A user-defined data type that combines data (variables) and functions (methods) that operate on that data. 
+- It is a blueprint for creating objects, which are instances of the class. 
+- A class can have both public and private members. Public members can be accessed from outside the class, while private members can only be accessed from within the class.
 
 🔹 The phonebook must be instantiated as an instance of the PhoneBook class. 
 🧐 ***What does "instantiated as an instance" mean?***
-- 
-🔹 Same thing for the contacts. Each one of them must be instantiated as an instance of the Contact class. 
-🔹 Anything used inside a class is private, used outside a class is public.
+- Means creating an object of that class, e.g. like
+```c++
+PhoneBook myPhoneBook; //`myPhoneBook` is an object of the PhoneBook class
+```
+🔹 Same thing for the contacts. Each one of them must be instantiated as an instance of the Contact class. E.g.
+```c++
+Contact myContact;
+```
