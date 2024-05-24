@@ -1,3 +1,9 @@
+# Member functions
+- or "Methods"
+- Functions attached to objects of a class
+- Private member functions cannot be used outside the class
+
+```c++
 #include <iostream>
 
 class Rectangle {
@@ -40,3 +46,4 @@ int	main()
 
 	return (0);
 }
+```

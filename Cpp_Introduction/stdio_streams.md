@@ -1,7 +1,7 @@
 # stdio streams
 - Input (accept user input) and output(print to console) in C++
 
-- Output:
+# Output:
 ```c++
 #include <iostream>
 
@@ -27,7 +27,7 @@ line 2
 x = 42
 ```
 
-- Input:
+# Input:
 ```c++
 #include <iostream>
 
@@ -54,6 +54,8 @@ int	main()
 🧐 What happens, if the user enters a value that doesn't match the variable type?
 - `cin` goes in to an error state. For example:
 ```c++
+#include <iostream>
+
 int	main()
 {
 	int	x = 0;
@@ -62,8 +64,10 @@ int	main()
 	return (0);
 }
 ```
-- We can detect and handle errors e.g.:
+- We can detect and handle invalid inputs e.g.:
 ```c++
+#include <iostream>
+
 int	main()
 {
 	int	x = 0;
@@ -75,9 +79,28 @@ int	main()
 		std::cin.clear();
 		std::cout << "Error: digit values only" << std::endl;
 	}
+	std::cin.ignore(1000, '\n');
 	return (0);
 }
 ```
-- `cin.clear();` clears the `cin` error state. 
+- `cin.clear()` clears the `cin` error state. 
 	- `clear()` function is "attached" to `cin`. 
 	- The error needs to be cleared in order for `cin` to be used again.
+- `cin.ignore()` is used to get rid of characters left in the input stream after the error.
+	- `(1000, '\n')` is saying "ignore the next 1000 characters in the input stream until the first newline. 
+
+- Using `cin` to accept string inputs, it will stop at the first space character encountered.
+- If we want it to accept the spaces, we use the `getline()`:
+- `getline()` stops reading the string at the first newline.
+```c++
+#include <iostream>
+
+int	main()
+{
+	std::string	name;
+	std::cout << "Enter your name: ";
+	getline(std::cin, name); //Use `cin` to store the string entered, into `name`
+	std::cout << "Hello " << name << "!" << std::endl;
+	return (0);
+}
+```

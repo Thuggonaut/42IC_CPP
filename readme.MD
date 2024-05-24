@@ -91,3 +91,15 @@ void swap(T& a, T& b) {
 | 🔸 **Function** | Library | Use |
 | --- | --- | --- |
 
+
+# NOTES TO DO
+- member attributes and functions
+- "this" keyword ? self keyword? pointer on current instance
+- initialization list
+- const
+- visibility: public vs private
+- class vs struct
+- accessors: getters and setters
+- comparisons: structual comparison on two instances, check if equal or not compare()
+- non-member attributes and functions
+- pointers to members
