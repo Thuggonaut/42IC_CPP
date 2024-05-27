@@ -1,3 +1,8 @@
+# Constructors
+- Special member function, called when an object is created
+- They initialize member variables of an object
+
+```c++
 #include <iostream>
 #include <string>
 
@@ -61,3 +66,7 @@ int	main()
 	cat3.printCat();
 	std::cout << std::endl;
 }
+```
+- Note: Default contructors must always be declared, 
+
+# Destructors

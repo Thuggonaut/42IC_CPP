@@ -25,7 +25,7 @@
 	- Any function implementation put in a header file (except for function templates). Example function template:
 ```c++
 template <typename T> //Generic function that can operate on various data types. `T` for type
-void swap(T& a, T& b) {
+void swap(T &a, T &b) {
     T temp = a;
     a = b;
     b = temp;
@@ -59,13 +59,13 @@ void swap(T& a, T& b) {
 | Character handling | `<cctype>` | Functions for testing and manipulating individual characters e.g. `isalpha`, `toupper` etc. |
 | Error Handling | `<stdexcept>` | Standard exceptions and error handling |
 | Manipulators | `<iomanip>` | Input/output manipulators for controlling formatting |
+| | `<string>` |  |
 | Numerics | `<cmath>` | Mathematical functions like `sin`, `cos`, `sqrt`, etc |
 | Utility | `<random>` | Random number generation utilities |
 | Time and Date | `<ctime>` | Date and time functions |
 |  | `<chrono>` | Time utilities for measuring time intervals and durations |
 | C Standard Library Headers | `<cstdio>` | |
 |  | `<cstdlib>  `|  |
-| | `<cstring>` | <string> is forbidden |
 | **Forbidden (STL)** | | |
 | Iterators | `<iterator>` | Classes and functions for working with iterators. <br>Provides a access to elements in a sequence |
 | Memory Management | `<memory>` | Utilities for compile-time type introspection |
@@ -90,16 +90,3 @@ void swap(T& a, T& b) {
 
 | 🔸 **Function** | Library | Use |
 | --- | --- | --- |
-
-
-# NOTES TO DO
-- member attributes and functions
-- "this" keyword ? self keyword? pointer on current instance
-- initialization list
-- const
-- visibility: public vs private
-- class vs struct
-- accessors: getters and setters
-- comparisons: structual comparison on two instances, check if equal or not compare()
-- non-member attributes and functions
-- pointers to members

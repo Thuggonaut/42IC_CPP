@@ -1,19 +1,28 @@
 #include <iostream>
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook(void) {
-	std::cout << "Default constructor called" << std::endl;
-	return;
-};
+using std::string;
+using std::cout;
+using std::cin;
+using std::endl;
 
-PhoneBook::~PhoneBook(void) {
-	std::cout << "Default destructor called" << std::endl;
-	return;
-};
+void printContacts() {
+	//todo
+}
 
-int	main()
+void printSpecific() {
+	//todo
+}
+
+void addContact(Contact contact) {
+	//todo
+}
+
+void cleanExit() {
+	//todo
+}
+
+int main()
 {
-	PhoneBook instance;
-
-	return (0);
+	PhoneBook phoneBook1;
 }
