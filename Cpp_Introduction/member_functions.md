@@ -6,6 +6,8 @@
 ```c++
 #include <iostream>
 
+using namespace std;
+
 class Rectangle {
 	private:
 		double	length;
@@ -26,7 +28,7 @@ class Rectangle {
 
 		//Must access private member function within the class
 		void printArea() {
-			std::cout << "Area: " << area() << std::endl;
+			cout << "Area: " << area() << endl;
 		}
 };
 
@@ -40,7 +42,7 @@ int	main()
 	Rectangle	rectangle1;
 
 	rectangle1.setDimensions(10, 20); //Set private member variables of rangtangle1 object instance
-	std::cout << "Perimeter: " << rectangle1.perimeter() << std::endl; //Get perimeter
+	cout << "Perimeter: " << rectangle1.perimeter() << endl; //Get perimeter
 
 	rectangle1.printArea(); //Get area calculation
 

@@ -5,9 +5,11 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 class Employee {
 	public:
-		std::string name; //Can access outside of class definition, same for functions
+		string name; //Can access outside of class definition, same for functions
 
 	private:
 		double salary; //Cannot be accessed outside the class definition, same for functions
@@ -25,11 +27,12 @@ int	main()
 - Private variables can be accessed in other ways, e.g. via a function in public:
 ```c++
 #include <iostream>
-#include <cstring>
+
+using namespace std;
 
 class Employee {
 	public:
-		std::string name;
+		string name;
 
 		//These functions can access the private member `salary` because they are members of the class
 		void set_salary(double amount) {
@@ -44,7 +47,7 @@ class Employee {
 		}
 
 		void printBonus() {
-			std::cout << name "Bonus: " << calculateBonus()  std::endl;
+			cout << name "Bonus: " << calculateBonus()  endl;
 		}
 
 	private:
@@ -61,7 +64,7 @@ int	main()
 	employee1.name = "Kevin"; 
 
 	employee1.set_salary(50000);
-	std::cout << "Salary: " << employee1.get_salary() << std::endl;
+	cout << "Salary: " << employee1.get_salary() << endl;
 
 	employee1.printBonus();
 	

@@ -9,11 +9,13 @@
 #include <iostream>
 #include <cmath> //round()
 
+using namespace std;
+
 namespace raw //`namespace` is used to declare the scope `raw`
 {
 	void	print(double nbr)
 	{
-		std::cout << "print raw: " << nbr << std::endl;
+		cout << "print raw: " << nbr << endl;
 	}
 }
 
@@ -21,7 +23,7 @@ namespace	rounded //`namespace` is used to declare the scope `rounded`
 {
 	void	print(double nbr)
 	{
-		std::cout << "print rounded: " << round(nbr) << std::endl;
+		cout << "print rounded: " << round(nbr) << endl;
 	}
 }
 ```

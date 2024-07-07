@@ -5,14 +5,16 @@
 ```c++
 #include <iostream>
 
+using namespace std;
+
 int	main()
 {
-	std::cout << "Printing" << std::endl; //Output a newline
-	std::cout << "We can use " << "multiple insertions" << std::endl;
-	std::cout << "line 1" << std::endl << "line 2" << std::endl;
+	cout << "Printing" << endl; //Output a newline
+	cout << "We can use " << "multiple insertions" << endl;
+	cout << "line 1" << endl << "line 2" << endl;
 	
 	int x = 42;
-	std::cout << "x = " << x << std::endl;
+	cout << "x = " << x << endl;
 	return (0); 
 }
 ```
@@ -31,22 +33,24 @@ x = 42
 ```c++
 #include <iostream>
 
+using namespace std;
+
 int	main()
 {
 	int	x = 0;
-	std::cout << "Enter your age: ";
-	std::cin >> x; //Accept a value and store it in `x`
-	std::cout << "You are " << x << " years old" << std::endl;
+	cout << "Enter your age: ";
+	cin >> x; //Accept a value and store it in `x`
+	cout << "You are " << x << " years old" << endl;
 
 	double	height = 0;
 	double	weight = 0;
-	std::cout << "Enter your height in cm and weight in kg (seperated by a space): ";
-	std::cin >> height >> weight;
-	std::cout << "You are " << height << " tall and weigh " << weight << " kilos" << std::endl;
+	cout << "Enter your height in cm and weight in kg (seperated by a space): ";
+	cin >> height >> weight;
+	cout << "You are " << height << " tall and weigh " << weight << " kilos" << endl;
 	return (0);
 }
 ```
-- `cin` is a standard input stream object, and accepts use input from the terminal or console.
+- `cin` is a standard input stream object, and accepts user input from the terminal or console.
 - `>>` is the stream extraction operator. 
 - We can also use the stream extraction operator multiple times in a chain.
 - Note, `cin` also ignores whitespaces preceding values it accepts. 
@@ -56,11 +60,13 @@ int	main()
 ```c++
 #include <iostream>
 
+using namespace std;
+
 int	main()
 {
 	int	x = 0;
-	std::cout << "Enter your age: "; //User will enter characters
-	std::cin >> x; //The expression will return false
+	cout << "Enter your age: "; //User will enter characters
+	cin >> x; //The expression will return false
 	return (0);
 }
 ```
@@ -68,18 +74,20 @@ int	main()
 ```c++
 #include <iostream>
 
+using namespace std;
+
 int	main()
 {
 	int	x = 0;
-	std::cout << "Enter your age: ";
-	if (std::cin >> x)
-		std::cout << "You are " << x << " years old" << std::endl;
+	cout << "Enter your age: ";
+	if (cin >> x)
+		cout << "You are " << x << " years old" << endl;
 	else
 	{
-		std::cin.clear();
-		std::cout << "Error: digit values only" << std::endl;
+		cin.clear();
+		cout << "Error: digit values only" << endl;
 	}
-	std::cin.ignore(1000, '\n');
+	cin.ignore(1000, '\n');
 	return (0);
 }
 ```
@@ -95,12 +103,14 @@ int	main()
 ```c++
 #include <iostream>
 
+using namespace std;
+
 int	main()
 {
-	std::string	name;
-	std::cout << "Enter your name: ";
-	getline(std::cin, name); //Use `cin` to store the string entered, into `name`
-	std::cout << "Hello " << name << "!" << std::endl;
+	string	name;
+	cout << "Enter your name: ";
+	getline(cin, name); //Use `cin` to store the string entered, into `name`
+	cout << "Hello " << name << "!" << endl;
 	return (0);
 }
 ```

@@ -4,14 +4,16 @@
 
 ```c++
 #include <iostream>
-#include <string> 
+#include <string>
+
+using namespace std;
 
 class Animal {
 	public:
-		std::string species; //Instance member variable, tied to instance
+		string species; //Instance member variable, tied to instance
 		static int total; //Static member variable, tied to class
 	//Constructor
-	Animal(std::string animal_species) {
+	Animal(string animal_species) {
 		species = animal_species;
 		total++; //Keep track of how many instances/animals created
 	}
@@ -29,13 +31,13 @@ int	main()
 	Animal *lion = new Animal("lion");
 	Animal *tiger = new Animal("tiger");
 
-	std::cout << "Lion: " << lion->species << std::endl;
-	std::cout << "Tiger: " << tiger->species << std::endl;
-	std::cout << "Total: " << Animal::total << std::endl;
+	cout << "Lion: " << lion->species << endl;
+	cout << "Tiger: " << tiger->species << endl;
+	cout << "Total: " << Animal::total << endl;
 
 	delete lion; //Will then give us a total of 1
 
-	std::cout << "Total: " << Animal::total << std::endl;
+	cout << "Total: " << Animal::total << endl;
 
 	return (0);
 }

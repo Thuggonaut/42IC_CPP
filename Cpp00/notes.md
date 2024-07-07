@@ -105,7 +105,7 @@ Contact myContact;
 				//nickname
 					//Each, 10 chars wide
 					//Right-align text. If longer than 10 chars, truncate and replace last char with a `.`
-			//Prompt user for a contact index (0 - 7)
+			//Prompt user for a contact index 
 				//Handle invalid user input of index, e.g. out of range or !digit
 				//If no errors, display the contact information, one field per line using `printSpecific()`
 
@@ -122,9 +122,7 @@ Contact myContact;
 			//Handle input errors, such as missing fields, invalid types
 			//Use `std::cin >>` to accept use input
 
-		//Exit function `cleanExit()` TODO is this a destructor?
-			//If user inputs `EXIT` command
-				//Delete each contact
+		//If user inputs `EXIT` command
 				//Terminate program
 
 

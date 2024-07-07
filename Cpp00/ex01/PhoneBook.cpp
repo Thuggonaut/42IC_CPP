@@ -1,28 +1,129 @@
+/* ************************************************************************** */
+/*	                                                                        */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/07 21:42:42 by tquemato          #+#    #+#             */
+/*   Updated: 2024/07/07 21:42:55 by tquemato         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include "PhoneBook.hpp"
 
-using std::string;
-using std::cout;
-using std::cin;
-using std::endl;
+Contact::Contact()
+	: firstName(""), lastName(""), nickname(""), phoneNo(""), darkestSecret("") {}
 
-void printContacts() {
-	//todo
+Contact::Contact(string firstName, string lastName, string nickname, string phoneNo, string darkestSecret)
+	: firstName(firstName), lastName(lastName), nickname(nickname), phoneNo(phoneNo), darkestSecret(darkestSecret) {}
+
+PhoneBook::PhoneBook()
+	: contactCount(0) {}
+
+bool validField(string &input, string prompt) { 
+	cout << GREEN << prompt << RESET << endl;
+	getline(cin, input);
+	if (input.empty()) {
+		cout << RED << "Field cannot be empty, input " << CYAN << "EXIT" << RED << " and try again" << RESET << endl;
+		return (false);
+	}
+	return (true);
 }
 
-void printSpecific() {
-	//todo
+void PhoneBook::addContact() {
+	string firstName, lastName, nickname, phoneNo, darkestSecret;
+
+	if (contactCount >= 8) {
+		cout << RED << "Phonebook is full" << RESET << endl;
+		return ;
+	}
+
+	cin.ignore();
+	if (!validField(firstName, "First name: ")) return ;
+	if (!validField(lastName, "Last name: ")) return ;
+	if (!validField(nickname, "Nickname: ")) return ;
+	if (!validField(phoneNo, "Phone number: ")) return ;
+	if (!validField(darkestSecret, "Darkest secret: ")) return ;
+	
+	contacts[contactCount++] = Contact(firstName, lastName, nickname, phoneNo, darkestSecret);
+	cout << MAGENTA << "Contact added successfully!" << RESET << endl;
 }
 
-void addContact(Contact contact) {
-	//todo
+string formatString(string s) {
+	if (s.length() > 10)
+		return (s.substr(0, 9) + ".");
+	return (s);
 }
 
-void cleanExit() {
-	//todo
+void PhoneBook::printContacts() {
+	cout << " | " << setw(10) << "Index" << " | "
+		<< setw(10) << "First Name" << " | "
+		<< setw(10) << "Last Name" << " | "
+		<< setw(10) << "Nickname" << " | " << endl;
+	
+	for (int i = 0; i < contactCount; ++i) {
+		cout << " | " << setw(10) << i + 1 << " | "
+			<< setw(10) << formatString(contacts[i].firstName) << " | "
+			<< setw(10) << formatString(contacts[i].lastName) << " | "
+			<< setw(10) << formatString(contacts[i].nickname) << " | " << endl;
+	}
+}
+
+void PhoneBook::printSpecific(int index) {
+	if (index < 1 || index > contactCount) {
+		cout << RED << "Invalid index" << RESET << endl;
+		return ;
+	}
+	Contact &contact = contacts[index - 1];
+	cout << CYAN << "First name: " << RESET << contact.firstName << endl;
+	cout << CYAN << "Last name: " << RESET << contact.lastName << endl;
+	cout << CYAN << "Nickname: " << RESET << contact.nickname << endl;
+	cout << CYAN << "Phone number: " << RESET << contact.phoneNo << endl;
+	cout << CYAN << "Darkest secret: " << RESET << contact.darkestSecret << endl;
+}
+
+void clPrompt() {
+	cout << YELLOW << "Enter a command: " << RESET << endl;
+	cout << CYAN << "< ADD >" << YELLOW << " to add a new contact" << RESET << endl;  
+	cout << CYAN << "< SEARCH >" << YELLOW << " to find a contact" << RESET << endl;
+	cout << CYAN << "< EXIT >" << YELLOW << " to exit program" << RESET << endl;
 }
 
 int main()
 {
-	PhoneBook phoneBook1;
+	string input;
+	PhoneBook myPhoneBook;
+	myPhoneBook.contactCount = 0;
+
+	clPrompt();
+
+	while (1) {
+		cin >> input;
+
+		if (input != "ADD" && input != "add" && input != "SEARCH" && input !=  "search" && input != "EXIT" && input != "exit") {
+			cout << RED << "Invalid command" << endl;
+			clPrompt();
+		}
+		else {
+			if (input == "EXIT" || input == "exit")
+				break;
+			else if (input == "ADD" || input == "add")
+				myPhoneBook.addContact();
+			else {
+				myPhoneBook.printContacts();
+				if (myPhoneBook.contactCount > 0) {
+					int index;
+					cout << YELLOW << "Enter the index of the contact you want displayed: " << RESET;
+					cin >> index;
+					myPhoneBook.printSpecific(index);
+				}
+				else 
+					cout << RED << "No contacts to display" << RESET << endl;
+			}
+		}
+	}
+
+	return (0);
 }

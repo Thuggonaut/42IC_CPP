@@ -7,11 +7,13 @@
 
 ```c++
 #include <iostream>
-#include <string> //Note: forbidden in 42_CPP
+#include <string>
+
+using namespace std;
 
 class	BankAccount {
 	public:
-		std::string	name;
+		string	name;
 		int	balance;
 };
 
@@ -25,13 +27,13 @@ int	main()
 	account1.name = "Jane";
 	account1.balance = 5000;
 
-	std::cout << account1.name << " has " << account1.balance " dollars " << std::endl;
+	cout << account1.name << " has " << account1.balance " dollars " << endl;
 
 	account2.balance = account2.balance - 1000;
 
-	std::string	pin;
-	std::string	address;
-	std::string	acn;
+	string	pin;
+	string	address;
+	string	acn;
 }
 ```
 - Define a "class"
