@@ -13,15 +13,20 @@
 #include <iostream>
 #include "PhoneBook.hpp"
 
+//Initialize the object's data members with default values
 Contact::Contact()
 	: firstName(""), lastName(""), nickname(""), phoneNo(""), darkestSecret("") {}
 
+//Initialize the object's data members with provided values, e.g. in line 52
 Contact::Contact(string firstName, string lastName, string nickname, string phoneNo, string darkestSecret)
 	: firstName(firstName), lastName(lastName), nickname(nickname), phoneNo(phoneNo), darkestSecret(darkestSecret) {}
 
+//Initialize contact count for tracking
 PhoneBook::PhoneBook()
 	: contactCount(0) {}
 
+//Check for valid input
+//Use getline() to include spaces
 bool validField(string &input, string prompt) { 
 	cout << GREEN << prompt << RESET << endl;
 	getline(cin, input);
@@ -32,6 +37,8 @@ bool validField(string &input, string prompt) {
 	return (true);
 }
 
+//Add new Contact to PhoneBook
+//cin.ignore to ignore the newline character left by previous cout
 void PhoneBook::addContact() {
 	string firstName, lastName, nickname, phoneNo, darkestSecret;
 
@@ -51,12 +58,14 @@ void PhoneBook::addContact() {
 	cout << MAGENTA << "Contact added successfully!" << RESET << endl;
 }
 
+//Truncate if string > 10 characters
 string formatString(string s) {
 	if (s.length() > 10)
 		return (s.substr(0, 9) + ".");
 	return (s);
 }
 
+//Display all contacts
 void PhoneBook::printContacts() {
 	cout << " | " << setw(10) << "Index" << " | "
 		<< setw(10) << "First Name" << " | "
@@ -71,6 +80,7 @@ void PhoneBook::printContacts() {
 	}
 }
 
+//Display selected contact
 void PhoneBook::printSpecific(int index) {
 	if (index < 1 || index > contactCount) {
 		cout << RED << "Invalid index" << RESET << endl;
@@ -91,6 +101,7 @@ void clPrompt() {
 	cout << CYAN << "< EXIT >" << YELLOW << " to exit program" << RESET << endl;
 }
 
+//Infinate loop until user inputs "EXIT"
 int main()
 {
 	string input;

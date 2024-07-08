@@ -18,6 +18,7 @@
 # include <iomanip>
 # include <stdbool.h>
 
+//Text formatting
 # define RESET		"\033[0m"
 # define RED		"\033[1;31m"
 # define GREEN		"\033[1;32m"
@@ -25,14 +26,15 @@
 # define MAGENTA	"\033[1;35m"
 # define CYAN		"\033[1;36m"
 
+//Alternative to `using namespace` for cleaner syntax
 using std::string;
 using std::cout;
 using std::cin;
 using std::endl;
 using std::getline;
 using std::setw;
-//using std::right;
 
+//Class definitions
 class Contact {
 	public:
 		string firstName;

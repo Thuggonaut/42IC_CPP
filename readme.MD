@@ -90,3 +90,12 @@ void swap(T &a, T &b) {
 
 | 🔸 **Function** | Library | Use |
 | --- | --- | --- |
+
+
+TODO
+- const
+- class vs struct
+- accessors ?
+- pointers to members ?
+- comparisons ?
+- non member attributes/functions 

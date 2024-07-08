@@ -147,11 +147,53 @@ Contact myContact;
 			//`cleanExit()` to Delete contacts and Terminate program
 ```
 
-TODO
-- start coding/testing
-- const
-- class vs struct
-- accessors ?
-- pointers to members ?
-- comparisons ?
-- non member attributes/functions 
+
+# Exercise 02: The Job Of Your Dreams
+
+### Review:
+- Recreate Account.cpp file
+- Compile to pass the tests.cpp
+	- Output should match the log file, with updated timestamps
+
+### New terms learned:
+
+**for_each()**
+- `<algorithms>` header
+- is a standard algorithm that applies a given function to each element in a range.
+
+**mem_fun_ref()**
+- `<algorithms>` header
+- `for_each(InputIterator first InputIterator last, Function func);`
+- creates a function object that calls a member function of a class. 
+- It takes a pointer to a member function and a reference to an object of the class as arguments.
+
+```c++
+#include <algorithm> 
+
+// Syntax for std::for_each()
+template <class InputIterator, class Function>
+Function for_each(InputIterator first, InputIterator last, Function func);
+
+// Syntax for std::mem_fun_ref()
+template <class T, class R, class M>
+mem_fun_ref(R T::* mf) -> mem_fun_ref<R (T&)>;
+```
+
+**Iterators: begin() and end()**
+- are member functions of the `vector` class
+- obtain iterators pointing to the first, and one past the last element of the vector.
+
+**pair class**
+- has two members
+- first: holds the first element of the pair
+- ssecond: holds the second element
+
+**time()**
+- `time(nullptr)` or `time(0)` is saying "I don't have a time_t object, just get me the current time".
+
+**vector**
+- a dynamic array, a sequence container that can grown/shrink at runtime.
+- a resizeable array that changes during runtime.
+- a template class that can store elements of any data type.
+- elements are stored in contiguous memory locations, allowing access and manipulation.
+
