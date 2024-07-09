@@ -1,5 +1,5 @@
 /* ************************************************************************** */
-/*                                                                            */
+/*	                                                                        */
 /*                                                        :::      ::::::::   */
 /*   Account.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
@@ -15,8 +15,8 @@
 #include <ctime>
 #include <iomanip>
 
-#define RESET   "\033[0m"
-#define BLUE    "\033[34m"
+#define RESET	"\033[0m"
+#define BLUE	"\033[34m"
 
 //using std::string;
 using std::cout;
@@ -43,18 +43,18 @@ void Account::_displayTimestamp() {
 Account::Account(int initial_deposit)
 	: _accountIndex(_nbAccounts++), _amount(initial_deposit), _nbDeposits(0), _nbWithdrawals(0) {
 		_totalAmount += initial_deposit;
-        _displayTimestamp(); 
-        cout << "index:" << BLUE << _accountIndex << RESET 
+		_displayTimestamp(); 
+		cout << "index:" << BLUE << _accountIndex << RESET 
 		<< ";amount:" << BLUE << _amount << RESET 
 		<< ";created" << endl;
 }
 
 //Destructor for the Account class
 Account::~Account() {
-    _displayTimestamp();
+	_displayTimestamp();
 	_nbAccounts--;
 	_totalAmount -= _amount; //todo check if line needed
-    cout << "index:" << BLUE << _accountIndex << RESET 
+	cout << "index:" << BLUE << _accountIndex << RESET 
 	<< ";amount:" << BLUE << _amount << RESET 
 	<< ";closed" << endl;
 }
@@ -65,11 +65,11 @@ int Account::getNbAccounts() {
 }
 
 int Account::getTotalAmount() {
-    return (_totalAmount);
+	return (_totalAmount);
 }
 
 int Account::getNbDeposits() {
-    return (_totalNbDeposits);
+	return (_totalNbDeposits);
 }
 
 int Account::getNbWithdrawals() {
@@ -79,7 +79,7 @@ int Account::getNbWithdrawals() {
 //Display all accounts information
 void Account::displayAccountsInfos() {
 	_displayTimestamp();
-    cout << "accounts:" << BLUE << getNbAccounts() << RESET 
+	cout << "accounts:" << BLUE << getNbAccounts() << RESET 
 	<< ";total:" << BLUE << getTotalAmount() << RESET 
 	<< ";deposits:" << BLUE << getNbDeposits() << RESET 
 	<< ";withdrawals:" << BLUE << getNbWithdrawals() << RESET << endl;
@@ -114,16 +114,16 @@ bool Account::makeWithdrawal(int withdrawal) {
 	<< ";withdrawal:";
 	if (_amount >= withdrawal) {
 		_amount -= withdrawal;
-        _totalAmount -= withdrawal;
-        _nbWithdrawals++;
-        _totalNbWithdrawals++;
-        cout << BLUE << withdrawal << RESET 
+		_totalAmount -= withdrawal;
+		_nbWithdrawals++;
+		_totalNbWithdrawals++;
+		cout << BLUE << withdrawal << RESET 
 		<< ";amount:" << BLUE << _amount << RESET 
 		<< ";nb_withdrawals:" << BLUE << _nbWithdrawals << RESET << endl;
-        return (true);
-    } 
+		return (true);
+	} 
 	else {
 		cout << "refused" << endl;
-        return (false);
+		return (false);
 	}
 }

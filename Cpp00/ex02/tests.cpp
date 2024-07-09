@@ -40,11 +40,11 @@ int		main( void ) {
 	ints_t::iterator	wit_begin	= withdrawals.begin(); //Iterator to the beginning of `withdrawals`
 	ints_t::iterator	wit_end		= withdrawals.end(); //Iterator to the end of `withdrawals`
 
-    //Display initial account statuses
+	//Display initial account statuses
 	Account::displayAccountsInfos();
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) ); //For each account, display its status
 
-    //Perform transactions
+	//Perform transactions
 	for ( acc_int_t it( acc_begin, dep_begin ); //Until we've processed all deposits
 		  it.first != acc_end && it.second != dep_end; //Until we've processed all withdrawals
 		  ++(it.first), ++(it.second) ) { //Increment both iterators of accounts and integers
@@ -56,7 +56,7 @@ int		main( void ) {
 	Account::displayAccountsInfos();
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
 
-    //Perform transactions
+	//Perform transactions
 	for ( acc_int_t it( acc_begin, wit_begin ); //Until we've processed all withdrawals
 		  it.first != acc_end && it.second != wit_end;
 		  ++(it.first), ++(it.second) ) { //Increment both iterators of accounts and integers
@@ -73,7 +73,7 @@ int		main( void ) {
 
 
 // ************************************************************************** //
-// vim: set ts=4 sw=4 tw=80 noexpandtab:                                      //
+// vim: set ts=4 sw=4 tw=80 noexpandtab:	                      //
 // -*- indent-tabs-mode:t;                                                   -*-
 // -*- mode: c++-mode;                                                       -*-
 // -*- fill-column: 75; comment-column: 75;                                  -*-

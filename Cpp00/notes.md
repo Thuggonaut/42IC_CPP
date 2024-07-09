@@ -151,8 +151,8 @@ Contact myContact;
 # Exercise 02: The Job Of Your Dreams
 
 ### Review:
-- Recreate Account.cpp file
-- Compile to pass the tests.cpp
+🔹 Recreate Account.cpp file
+🔹 Compile to pass the tests.cpp
 	- Output should match the log file, with updated timestamps
 
 ### New terms learned:
