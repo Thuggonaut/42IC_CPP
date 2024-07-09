@@ -92,3 +92,32 @@
 - The pointer can be initialized to `nullptr`.
 	- HumanB might not be created with a weapon, but could aquire one later.
 - The pointer allows for changing weapons at runtime by pointing to a different `Weapon` object. 
+
+
+
+# Exercise 04: Sed is for losers
+
+### Review:
+🔹 Create a program that takes three parameters in the following order: 
+- a `filename` and two strings, 
+- `s1` and 
+- `s2`
+- It will open the file `<filename>` and copies its content into a new file
+`<filename>.replace`, replacing every occurrence of `s1` with `s2`.
+- Forbidden: `std::string::replace`
+- Create and turn in your own tests to ensure your program works as expected.
+```c++
+//int main(int ac, char**av)
+	//Handle invalid inputs
+
+	//Open filename
+		//Read contents into a string var
+	
+	//Replace Occurrences of s1 with s2
+
+	//Create/open a new file named <filename>.replace
+		//Write modified string to this new file
+	
+	//Test by opening newly created file and display its contents
+```
+

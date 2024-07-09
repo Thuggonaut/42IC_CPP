@@ -1,23 +1,30 @@
 NAME		= violence
 CXX			= c++
 CXXFLAGS	= -Wall -Werror -Wextra
-SRC 		= Weapon.cpp \
-				HumanA.cpp \
-				HumanB.cpp \
-				main.cpp
-RM			=	rm -rf
+RM			= rm -rf
+INC			= inc/
+SRC_DIR		= src/
+OBJ_DIR		= obj/
+SRC 		= Weapon.cpp HumanA.cpp HumanB.cpp main.cpp
 
-all: 		$(NAME)
+SRCS		=	$(addprefix $(SRC_DIR), $(SRC))
+OBJ 		= 	$(patsubst $(SRC_DIR)%.cpp, $(OBJ_DIR)%.o, $(SRCS))
 
-$(NAME): 	$(SRC)
-			$(CXX) $(CXXFLAGS) $^ -o $@
+all: 			$(NAME)
+
+$(NAME): 		$(OBJ)
+				$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+
+$(OBJ_DIR)%.o:	$(SRC_DIR)%.cpp 
+				@mkdir -p $(@D)
+				@$(CXX) $(CXXFLAGS) -c $^ -o $@
 
 clean:
-			$(RM) $(NAME)
+				@$(RM) $(NAME) $(OBJ_DIR)
 
-re: 		clean all
+re: 			clean all
 
-.PHONY: 	all clean re leaks valgrind_leaks
+.PHONY: 		all clean re leaks valgrind_leaks
 
 leaks: re
 	@echo "\033[1;33m\nChecking for memory leaks...\033[0m"
