@@ -177,3 +177,63 @@ int main() {
 - `what()` is used to retrieve the error message associated with that exception.
 
 
+# Exercise 05: Harl 2.0
+
+### Review:
+- Automate Harl, he says the same things.
+
+🔹 Implement a class `Harl` with 
+🔸 private member functions:
+- `void debug( void );`
+- `void info( void );`
+- `void warning( void );`
+- `void error( void );`
+🔸 public member function that calls the four member functions above
+depending on the level passed as parameter:
+- `void complain( std::string level );`
+
+🔹 Create and turn in tests to show that Harl complains a lot. 
+
+
+# Exercise 06: Harl filter
+
+### Review:
+- Implement a system to filter what Harl says depending on the log levels you want to listen to.
+
+🔹 Create a program that takes as parameter one of the four levels. 
+- It will display all messages from this level and above. 
+- For example:
+```
+$> ./harlFilter "WARNING"
+[ WARNING ]
+I think I deserve to have some extra bacon for free.
+I've been coming for years whereas you started working here since last month.
+[ ERROR ]
+This is unacceptable, I want to speak to the manager now.
+$> ./harlFilter "I am not sure how tired I am today..."
+[ Probably complaining about insignificant problems ]
+```
+
+🧐 ***What is a switch statement?***
+- A switch statement is a control flow statement used to execute one set of statements from multiple choices based on the value of a variable or an expression.
+- Handy for replacing multiple nested if-else statements when you're checking the same variable against several possible values.
+- For example:
+```c++
+switch (expression) {
+    case value1:
+        // Statements to execute if expression equals value1
+        break;
+    case value2:
+        // Statements to execute if expression equals value2
+        break;
+    // More case statements as needed
+    default:
+        // Statements to execute if none of the above cases match
+        break;
+}
+```
+- The switch statement evaluates the expression once and then compares the resulting value with the values of each case label.
+- If a match is found, the corresponding block of statements executes until a `break` statement is encountered.
+- If no case matches and a `default` label is provided, its associated block of statements executes.
+- Each case must end with a `break` statement to prevent fall-through (where execution continues to the next case).
+- The default case is optional but provides a fallback when no other cases match.
