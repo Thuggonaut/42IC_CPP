@@ -121,3 +121,59 @@
 	//Test by opening newly created file and display its contents
 ```
 
+🧐 ***What are exceptions?***
+- An exception in programming is an unexpected event or condition that disrupts the normal flow of a program's execution.
+- Exceptions handles errors gracefully, providing meaningful error messages to the user.
+- Example:
+```c++
+#include <iostream>
+#include <stdexcept> // For standard exceptions
+
+using namespace std;
+
+int main() {
+    try {
+        // Code that might throw an exception
+        int x = -1;
+        if (x < 0) {
+            throw runtime_error("Negative value encountered");
+        }
+    } catch (const runtime_error& e) {
+        // Handle runtime error exception
+        cerr << "Runtime error: " << e.what() << endl;
+    } catch (const exception& e) {
+        // Handle any other standard exception
+        cerr << "Exception: " << e.what() << endl;
+    } catch (...) {
+        // Catch any other type of exception
+        cerr << "Unknown exception occurred" << endl;
+    }
+
+    return 0;
+}
+
+```
+**try()**
+- block: Contains code that might generate exceptions. 
+- If an exception occurs, the rest of the try block is skipped.
+
+**throw()**
+- statement: Used to throw an exception. 
+- The type of the exception determines which catch block is executed. 
+- In the example, `throw runtime_error("Negative value encountered");` throws a runtime_error exception.
+
+**catch()** 
+- block: Catches and handles exceptions. 
+- The type specified in the parentheses after catch determines the types of exceptions it will handle. 
+- In the example, the first catch block catches runtime_error exceptions, the second catches other exception types, and the third catches any other exceptions using `catch(...)`.
+
+**what()** 
+- method: Standard exceptions have a `what()` method that returns a C-string describing the exception.
+
+**runtime_error()**
+- a standard exception class in C++ that is typically used to indicate errors that occur during runtime.
+- used to throw exceptions.
+-  It takes a `const std::string &argument` that represents the error message associated with the exception.
+- `what()` is used to retrieve the error message associated with that exception.
+
+

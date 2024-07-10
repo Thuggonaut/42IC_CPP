@@ -56,6 +56,7 @@ void swap(T &a, T &b) {
 | --- | --- | --- |
 | Input/Output Streams | `<iostream>` | For Input/output operations <br>Provides standard input/output streams |
 | File I/O | `<fstream>` | File stream operations for reading from and writing to files |
+| String Streams | `<sstream>` | Used to manipulate strings as if they were input/output streams |
 | Character handling | `<cctype>` | Functions for testing and manipulating individual characters e.g. `isalpha`, `toupper` etc. |
 | Error Handling | `<stdexcept>` | Standard exceptions and error handling |
 | Manipulators | `<iomanip>` | Input/output manipulators for controlling formatting |
@@ -80,16 +81,26 @@ void swap(T &a, T &b) {
 | --- | --- | --- |
 | `std::cout` | `<iostream>` | Output text to the standard output/console <br>`<<` to write to, e.g.: <br>`std::cout << "Hello, World!";` |
 | `std::cin` | `<iostream>` | Read input from the standard input/keyboard <br>`>>` to read data from, e.g.: <br>`std::cin >> variable;` |
-| `std::cerr` | `<iostream>` | |
+| `std::cerr` | `<iostream>` | Output an error message. Unlike `cout`, `cerr` is unbuffered and immediately displayed |
 | `std::endl` | `<iostream>` | Insert a newline character `\n` to the output stream then flush the stream/output buffer |
+| `std::stringstream` | `<sstream>` | Implements an in-memory stream (a stream that operates on strings in memory) allowing you to read from or write to strings using the same interface as the standard input/output streams (`std::cin` and `std::cout`) |
+
 
 
 | 🔸 **Class** | Library | Use |
 | --- | --- | --- |
 
 
-| 🔸 **Function** | Library | Use |
+| 🔸 **Function** | Library | Syntax | Use |
 | --- | --- | --- |
+| `is_open()` | `<fstream>` |  | Checks whether a file stream is currently associated with a file. It returns a boolean value |
+| `rdbuf()` | `<fstream>` |  | Used to access the associated stream buffer object of the stream and returns a `std::streambuf *pointer` |
+| `str()` | `<sstream>` |  | Extracts the content of the `stringstream` and returns it as a `std::string` |
+| `find()` | `<string>` | `size_t find(const std::string& str, size_t pos = 0) const;` | Used to search for a substring within a string and returns the position of the first occurrence of the substring. If the substring is not found, it returns `std::string::npos`. `npos` signifies "not found" |
+| `substr()` | `<string>` | `std::string substr(size_t pos = 0, size_t len = npos) const;` | Returns a substring of the string object it is called on. Specified by the starting position and the length of the substring to extract. `npos` means "up to the end of the string" |
+
+
+
 
 
 TODO
