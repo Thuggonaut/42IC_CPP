@@ -72,6 +72,19 @@ int	main()
 - Note: Default contructors must always be declared, 
 
 
+# Copy constructors
+- used to create a new object as a copy of an existing object. 
+- It is called when a new object is being created from an existing object, which can happen in the following scenarios:
+	- When an object is passed by value to a function.
+	- When an object is returned by value from a function.
+	- When an object is explicitly copied.
+- Syntax:
+```c++
+ClassName(const ClassName& other);
+```
+
+
+
 # Destructors
 - member function to destroy an object and clean up.
 - Uses the same class name, but with a `~` in front.
