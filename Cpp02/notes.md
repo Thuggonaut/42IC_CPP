@@ -1,4 +1,4 @@
-# CPP Module 01
+# CPP Module 02
 
 # New rules:
 - All classes will implement:
@@ -161,4 +161,24 @@ int main() {
 	- A static member function `min` that takes as parameters two references to constant fixed-point numbers, and returns a reference to the smallest one.
 	- A static member function `max` that takes as parameters two references on fixed-point numbers, and returns a reference to the greatest one.
 	- A static member function `max` that takes as parameters two references to constant fixed-point numbers, and returns a reference to the greatest one.
+
+
+
+# Exercise 03: BSP
+🔹 Implement a function which indicates whether a point is inside of a triangle or not.
+- `bool bsp( Point const a, Point const b, Point const c, Point const point);`
+	- `a, b, c`: The vertices of our beloved triangle.
+	- `point`: The point to check.
+	- `Returns`: `True` if the point is inside the triangle. `False `otherwise.
+	- Thus, if the point is a vertex or on edge, it will return False.
+🔹 Implement and turn in your own tests.
+
+🧐 ***What is BSP?***
+- BSP stands for Binary space partitioning. 
+- a method for recursively subdividing a space into two convex sets using hyperplanes (in 2D, these are lines). 
+- This technique is commonly used in computer graphics, computational geometry, and game development for:
+	- Rendering Optimization: BSP trees help determine which objects are visible from a particular viewpoint, improving rendering efficiency by allowing back-to-front or front-to-back drawing.
+	- Collision Detection: It simplifies the process of checking intersections between objects in a scene.
+	- Scene Management: BSP can organize complex environments, facilitating efficient spatial queries and object management.
+
 
