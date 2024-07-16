@@ -6,11 +6,11 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 19:33:59 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/15 14:12:15 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/16 20:51:21 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "../inc/ClapTrap.hpp"
 
 //Initialize default object members
 ClapTrap::ClapTrap() : name(""), hitPoints(10), energyPoints(10), attackDamage(10) {
