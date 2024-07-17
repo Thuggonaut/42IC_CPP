@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 00:17:32 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/17 21:17:58 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/17 18:03:01 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
 #include "ClapTrap.hpp"
 
 
-class ScavTrap : public ClapTrap { //Declare a derived class from ClapTrap
+class FragTrap : virtual public ClapTrap { //Declare a derived class from ClapTrap
 	public:
-		ScavTrap(string name); //Constructor with a parameter
-		ScavTrap(ScavTrap const &copy); //Copy constructor
-		ScavTrap &operator=(ScavTrap const &copy); //Copy assignment operator
-		~ScavTrap(); //Destructor
+		FragTrap(string name);  
+		FragTrap(FragTrap const &copy);  
+		FragTrap &operator=(FragTrap const &copy); 
+		~FragTrap();  
 
-		void attack(const string &target); //Display different attack message
-		void guardGate(); //Member function specific to ScavTrap
-
+		void highFivesGuys(); //Member function specific to FragTrap
 };
 
 
 #endif
-
-//`override` used to indicate that a member function is intended to override a base class function

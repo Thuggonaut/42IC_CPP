@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 00:17:36 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/17 21:19:05 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/17 21:17:22 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,6 @@ void ScavTrap::attack(const string &target) {
 }
 
 void ScavTrap::guardGate() {
-	cout << name << " is now in Gate keeper mode." << endl;
+	cout << "ScavTrap " << name << " is now in Gate keeper mode." << endl;
 }
 

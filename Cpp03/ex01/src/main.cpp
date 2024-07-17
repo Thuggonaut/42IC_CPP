@@ -6,13 +6,13 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 19:33:56 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/16 21:06:08 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/17 20:51:52 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ScavTrap.hpp"
 
-
+/*
 //Test the constructor functions
 //Output for all ScavTraps objects will have the same name, because they're essentially copies of the first object
 int main()
@@ -26,13 +26,13 @@ int main()
 	cout << endl << "Initiate attack!" << endl;
 
 	bot1.attack(bot2);
+	bot2.takeDamage(bot1.getAttackDamage());
 	bot2.beRepaired(5);
 
 	return (0);
-}
+}*/
 
 
-/*
 //Test the member functions
 int main()
 {
@@ -44,12 +44,12 @@ int main()
 	cout << endl << "Initiate attack!" << endl;
 
 	bot1.attack(bot2);
-	bot2.beRepaired(5);
+	bot2.takeDamage(bot1.getAttackDamage());
+	bot2.guardGate();
 	bot2.attack(bot3);
-	bot3.attack(bot1);
-	bot1.beRepaired(5);
-	bot4.attack(bot1);
-	bot4.attack(bot3);
+	bot3.takeDamage(bot2.getAttackDamage());
+	bot3.guardGate();
+	bot3.beRepaired(5);
 
 	return (0);
-}*/
+}

@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 19:33:54 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/17 20:39:56 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/17 21:11:31 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class ClapTrap {
 		ClapTrap &operator=(const ClapTrap &copy);  
 		virtual ~ClapTrap(); //Virtual destructor
 
-		virtual void attack(const ClapTrap &target); //The only function marked as virtual - project specifises it prints a different message
+		virtual void attack(const ClapTrap &target);
 		void takeDamage(unsigned int amount); 
 		void beRepaired(unsigned int amount); 
 

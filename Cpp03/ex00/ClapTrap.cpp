@@ -6,16 +6,11 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 19:33:59 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/15 14:12:15 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/17 21:06:09 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-
-//Initialize default object members
-ClapTrap::ClapTrap() : name(""), hitPoints(10), energyPoints(10), attackDamage(10) {
-	cout << "Default constructor called" << endl;
-}
 
 //Initialize object members with given name parameter
 ClapTrap::ClapTrap(string name) : name(name), hitPoints(10), energyPoints(10), attackDamage(10) {
@@ -42,14 +37,13 @@ ClapTrap::~ClapTrap() {
 	cout << "Destructor called for " << name << endl;
 }
 
-void ClapTrap::attack(ClapTrap &target) {
-	if (hitPoints <= 0 || energyPoints <= 0) {
-		cout << name << " has no hit points or energy points to attack or repair!" << endl;
+void ClapTrap::attack(const ClapTrap &target) {
+	if (hitPoints <= 0) {
+		cout << name << " has no hit points or energy points to attack!" << endl;
 		return ;
 	}
 	else {
 		cout << name << " attacks " << target.getName() << " causing " << attackDamage << " points of damage!" << endl;
-		target.takeDamage(attackDamage);
 		energyPoints--;
 		cout << name << " has " << energyPoints << " energy points remaining." << endl;
 	}
@@ -59,7 +53,7 @@ void ClapTrap::takeDamage(unsigned int amount) {
 	hitPoints -= amount;
 	if (hitPoints < 0)
 		hitPoints = 0;
-	cout << name << " has " << hitPoints << " hit points remaining." << endl;
+	cout << name << " takes " << amount << " points of damage and has " << hitPoints << " hit points remaining." << endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
@@ -79,10 +73,3 @@ string ClapTrap::getName() const { return name; }
 int ClapTrap::getHitPoints() const { return hitPoints; }
 int ClapTrap::getEnergyPoints() const { return energyPoints; }
 int ClapTrap::getAttackDamage() const { return attackDamage; }
-
-/*
-- When ClapTrack attacks, it causes its target to lose <attack damage> hit points.
-- When ClapTrap repairs itself, it gets <amount> hit points back. 
-- Attacking and repairing cost 1 energy point each. 
-- Of course, ClapTrap can’t do anything if it has no hit points or energy points left.
-*/

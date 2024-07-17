@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 00:17:32 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/17 21:17:58 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/17 21:18:35 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,4 @@ class ScavTrap : public ClapTrap { //Declare a derived class from ClapTrap
 
 #endif
 
-//`override` used to indicate that a member function is intended to override a base class function
+//`override` in some cases can be used to indicate that a member function is intended to override a base class function

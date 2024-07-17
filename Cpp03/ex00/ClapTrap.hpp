@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 19:33:54 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/15 13:46:39 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/17 20:37:23 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,12 @@ class ClapTrap {
 		int attackDamage;
 	
 	public:
-	    ClapTrap(); //Default constructor
 		ClapTrap(string name); //Constructor with name parameter
 		ClapTrap(const ClapTrap &copy); //Copy constructor
 		ClapTrap &operator=(const ClapTrap &copy); //Copy assignment operator
 		~ClapTrap(); //Destructor
 
-		void attack(ClapTrap &target); //Attack function
+		void attack(const ClapTrap &target); //Attack function
 		void takeDamage(unsigned int amount); //Take damage function
 		void beRepaired(unsigned int amount); //Be repaired function
 
