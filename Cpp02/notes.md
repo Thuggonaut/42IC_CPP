@@ -1,4 +1,8 @@
 # CPP Module 02
+- Ad-hoc polymorphism
+- operator overloading
+- Orthodox Canonical class form
+
 
 # New rules:
 - All classes will implement:

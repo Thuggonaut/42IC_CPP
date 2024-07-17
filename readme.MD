@@ -104,7 +104,6 @@ void swap(T &a, T &b) {
 
 
 TODO
-- const
 - class vs struct
 - accessors ?
 - pointers to members ?

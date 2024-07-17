@@ -1,4 +1,6 @@
 # CPP Module 03
+- Inheritance
+
 
 # Exercise 00: Aaaaand... OPEN!
 

@@ -1,4 +1,6 @@
 # CPP Module 00
+- Basic shit
+
 
 # Exercise 00: Megaphone
 
