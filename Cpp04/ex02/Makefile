@@ -1,4 +1,4 @@
-NAME		= brain
+NAME		= a_animal
 CXX			= c++
 CXXFLAGS	= -Wall -Werror -Wextra
 RM			= rm -rf

@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/19 00:09:02 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/19 22:39:15 by tquemato         ###   ########.fr       */
+/*   Created: 2024/07/19 00:20:27 by tquemato          #+#    #+#             */
+/*   Updated: 2024/07/19 00:26:11 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include "WrongAnimal.hpp"
 
 
-class Cat : public Animal {
-	private:
-	    Brain *catBrain;
-		
+class WrongCat : public WrongAnimal {
 	public:
-		Cat(); 
-		Cat(const Cat &copy);
-		Cat &operator=(const Cat &copy);
-		~Cat();
+		WrongCat(); 
+		WrongCat(const WrongCat &copy);
+		WrongCat &operator=(const WrongCat &copy);
+		~WrongCat();
 
-		void makeSound() const;
-		Brain *getBrain() const; //Returns a pointer to the Cat's Brain object
+		using WrongAnimal::makeSound;
 };
 
 

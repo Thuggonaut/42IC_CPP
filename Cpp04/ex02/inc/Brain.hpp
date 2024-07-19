@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/19 00:09:02 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/19 22:39:15 by tquemato         ###   ########.fr       */
+/*   Created: 2024/07/19 19:44:59 by tquemato          #+#    #+#             */
+/*   Updated: 2024/07/19 20:06:07 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
 
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include <iostream>
+#include "AnsiEscSeq.hpp"
+
+using std::cout;
+using std::endl;
+using std::string;
 
 
-class Cat : public Animal {
-	private:
-	    Brain *catBrain;
-		
+class Brain {
 	public:
-		Cat(); 
-		Cat(const Cat &copy);
-		Cat &operator=(const Cat &copy);
-		~Cat();
+		string *ideas[100]; //Array of pointers to strings representing brain ideas
 
-		void makeSound() const;
-		Brain *getBrain() const; //Returns a pointer to the Cat's Brain object
+		Brain(); // Default constructor
+		Brain(const Brain &copy); // Copy constructor
+		Brain &operator=(const Brain &copy); //Copy assignment operator
+		virtual ~Brain(); // Destructor
 };
 
 

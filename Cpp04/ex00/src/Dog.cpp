@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 00:20:30 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/19 00:58:12 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/19 20:23:14 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 Dog::Dog() {
 	cout << BLUE_BB << "A Dog has been born by default!" << RESET << endl;
-	type = "Dog"; //Maybe use this->
+	type = "Dog"; 
 }
 
 Dog::Dog(const Dog &copy) : Animal(copy) {
 	cout << BLUE_BB << "A Dog has been born from a copy!" << RESET << endl;
-	type = copy.type; //Maybe use this->
+	type = copy.type; 
 }
 
 Dog &Dog::operator=(const Dog &copy) {
 	cout << BLUE_BB << "A clone of a Dog has been assigned!" << RESET << endl;
 	if (this != &copy)
-        type = copy.type; //Maybe use this->
+        type = copy.type; 
     return (*this);
 }
 
