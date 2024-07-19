@@ -18,3 +18,10 @@
 - Implement a `WrongCat` class that inherits from a `WrongAnimal` class. 
 	- If you replace the `Animal` and the `Cat` by the wrong ones in the code above, the `WrongCat` should output the `WrongAnimal` sound.
 - Implement and turn in more tests than the ones given above.
+
+### Review:
+- Object slicing
+
+
+# Exercise 01: I don’t want to set the world on fire
+- 

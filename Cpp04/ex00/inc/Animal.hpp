@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 22:55:35 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/18 00:11:04 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/18 17:34:37 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 
 #include <iostream>
+#include "AnsiEscSeq.hpp"
 
 using std::string;
 using std::cout;

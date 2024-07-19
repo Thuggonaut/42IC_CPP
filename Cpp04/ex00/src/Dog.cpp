@@ -6,18 +6,33 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 00:20:30 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/18 01:27:26 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/19 00:58:12 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Dog.hpp"
 
 Dog::Dog() {
-	cout << "A Dog has been born by default!" << endl;
+	cout << BLUE_BB << "A Dog has been born by default!" << RESET << endl;
 	type = "Dog"; //Maybe use this->
 }
 
 Dog::Dog(const Dog &copy) : Animal(copy) {
-	cout << "A Dog has been born from a copy!" << endl;
+	cout << BLUE_BB << "A Dog has been born from a copy!" << RESET << endl;
 	type = copy.type; //Maybe use this->
-}//TODO we are up to here, edit ansi first
+}
+
+Dog &Dog::operator=(const Dog &copy) {
+	cout << BLUE_BB << "A clone of a Dog has been assigned!" << RESET << endl;
+	if (this != &copy)
+        type = copy.type; //Maybe use this->
+    return (*this);
+}
+
+Dog::~Dog() {
+	cout << RED_BB << "A Dog has died!" << RESET << endl;
+}
+
+void Dog::makeSound() const {
+	cout << BLUE_BB << "Woof!" << RESET << endl;
+}
