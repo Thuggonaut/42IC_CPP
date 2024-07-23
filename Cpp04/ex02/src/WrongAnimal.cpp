@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 00:14:35 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/19 15:09:54 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/20 19:55:57 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ WrongAnimal::WrongAnimal() {
 	type = "WrongAnimal"; //Maybe use this->
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &copy) : Animal(copy) {
+WrongAnimal::WrongAnimal(const WrongAnimal &copy) : AAnimal(copy) {
 	cout << MAGENTA_BB << "A WrongAnimal type " << type << " has been born from a copy!" << RESET << endl;
 	type = copy.type; //Maybe use this->
 }

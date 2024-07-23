@@ -1,11 +1,10 @@
-NAME		= a_animal
-CXX			= c++
+NAME 		= amateria
+CXX 		= c++
 CXXFLAGS	= -Wall -Werror -Wextra
 RM			= rm -rf
-INC			= inc/
 SRC_DIR		= src/
 OBJ_DIR		= obj/
-SRC 		= Brain.cpp AAnimal.cpp WrongAnimal.cpp Dog.cpp Cat.cpp WrongCat.cpp main.cpp 
+SRC			= AMateria.cpp Ice.cpp Cure.cpp Character.cpp MateriaSource.cpp main.cpp
 
 SRCS		=	$(addprefix $(SRC_DIR), $(SRC))
 OBJ 		= 	$(patsubst $(SRC_DIR)%.cpp, $(OBJ_DIR)%.o, $(SRCS))

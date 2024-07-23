@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 00:09:00 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/19 22:39:34 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/19 22:54:51 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cat::Cat() {
 	catBrain = new Brain();
 }
 
-Cat::Cat(const Cat &copy) : Animal(copy) {
+Cat::Cat(const Cat &copy) : AAnimal(copy) {
 	cout << MAGENTA_BB << "A Cat has been born from a copy!" << RESET << endl;
 	type = copy.type; 
 	catBrain = copy.catBrain;

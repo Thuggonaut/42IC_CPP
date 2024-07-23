@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 22:43:19 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/19 22:28:15 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/21 15:57:31 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 /*
 int main()
 {
-const Animal* j = new Dog();
-const Animal* i = new Cat();
+const AAnimal* j = new Dog();
+const AAnimal* i = new Cat();
 delete j;//should not create a leak
 delete i;
 
@@ -30,7 +30,12 @@ return 0;
 
 int main() 
 {
-	Animal *array[6]; //Declare an array of 6 animals
+	if (is_abstract<AAnimal>::value)
+		cout << GREEN_BB << "AAnimal class is abstract" << RESET << endl;
+	else
+		cout << RED_BB << "AAnimal class is not abstract" << RESET << endl;
+	
+	AAnimal *array[6]; //Declare an array of 6 animals
 
 	for (int i = 0; i < 6 / 2; i++) //For the first half of the array, create Dogs
 		array[i] = new Dog();

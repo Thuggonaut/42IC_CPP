@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/19 19:44:59 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/19 22:52:16 by tquemato         ###   ########.fr       */
+/*   Created: 2024/07/23 18:05:37 by tquemato          #+#    #+#             */
+/*   Updated: 2024/07/23 21:24:30 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-#define BRAIN_HPP
+//Concrete class, can be instantiated
+
+#ifndef ICE_HPP
+#define ICE_HPP
+
+#include "AMateria.hpp"
 
 
-#include <iostream>
-#include "AnsiEscSeq.hpp"
+class Ice : public AMateria {
+	private:
+		string type;
 
-using std::cout;
-using std::endl;
-using std::string;
-
-
-class Brain {
 	public:
-		string *ideas[100]; //Array of pointers to strings representing brain ideas
-
-		Brain(); // Default constructor
-		Brain(const Brain &copy); // Copy constructor
-		Brain &operator=(const Brain &copy); //Copy assignment operator
-		virtual ~Brain(); // Destructor
+		Ice();
+		Ice(const Ice &copy);
+		Ice &operator=(const Ice &copy);
+		~Ice();
+		
+		Ice *clone() const; //Return a pointer to a new Ice object
+		void use(ICharacter &target); 
 };
 
 

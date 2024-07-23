@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/19 19:44:59 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/19 22:52:16 by tquemato         ###   ########.fr       */
+/*   Created: 2024/07/23 16:49:37 by tquemato          #+#    #+#             */
+/*   Updated: 2024/07/23 18:13:45 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-#define BRAIN_HPP
+//Concrete class, can be instantiated
+
+#ifndef CURE_HPP
+#define CURE_HPP
+
+#include "AMateria.hpp"
 
 
-#include <iostream>
-#include "AnsiEscSeq.hpp"
+class Cure : public AMateria {
+	private:
+		string type;
 
-using std::cout;
-using std::endl;
-using std::string;
-
-
-class Brain {
 	public:
-		string *ideas[100]; //Array of pointers to strings representing brain ideas
-
-		Brain(); // Default constructor
-		Brain(const Brain &copy); // Copy constructor
-		Brain &operator=(const Brain &copy); //Copy assignment operator
-		virtual ~Brain(); // Destructor
+		Cure();
+		Cure(const Cure &copy);
+		Cure &operator=(const Cure &copy);
+		~Cure();
+		
+		Cure *clone() const; //Return a pointer to a new Cure object
+		void use(ICharacter &target); 
 };
 
 

@@ -42,8 +42,36 @@
 
 
 # Exercise 02: Abstract class
+🧐 ***What is an abstract class?***
 - An abstract class is a class that cannot be instantiated directly. It is designed to be a base class for other classes.
 - Contains at least one pure virtual function, which is declared by assigning = 0 to a virtual function. This makes the class abstract.
 - Derived classes must implement all pure virtual functions to be instantiated.
 
 - Fix the `Animal` class so nobody can instantiate it. Everything should work as before.
+
+
+# Exercise 03: Interface & recap
+🧐 ***What is an interface?***
+-  A pure abstract class that has only pure virtual functions and no data members. 
+	- It serves as a contract for derived classes to implement specific behaviors.
+- Pure Virtual Function: 
+	- Declared by assigning `0` to the virtual function.
+	- `virtual void functionName() = 0;`
+
+🧐 ***What are concrete classes?***
+- Concrete classes are classes that can be instantiated. 
+	- They provide implementations for all their member functions, including any virtual functions inherited from base classes.
+
+# Recap:
+- **Abstract Class:** 
+	- A class that cannot be instantiated directly. It may contain both pure virtual functions and other member functions or data members.
+
+- **Interface (Pure Abstract Class):** 
+	- A special type of abstract class that contains only pure virtual functions and no data members. It serves as a contract for derived classes.
+
+- **Concrete Class:** 
+	- Can be instantiated. Provides implementations for all its member functions.
+
+🧐 ***What is a deep copy?***
+- A deep copy means that when a copy of an object is created, it should also create copies of the objects that it points to, ensuring that any changes to the copied object does not affect the original object.
+- This is achieved by implementing a copy constructor and assignment operator that perform a deep copy.

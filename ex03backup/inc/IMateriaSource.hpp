@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/19 19:44:59 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/19 22:52:16 by tquemato         ###   ########.fr       */
+/*   Created: 2024/07/23 20:14:18 by tquemato          #+#    #+#             */
+/*   Updated: 2024/07/23 20:17:05 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-#define BRAIN_HPP
+#ifndef IMATERIASOURCE_HPP
+# define IMATERIASOURCE_HPP
+
+#include "AMateria.hpp"
 
 
-#include <iostream>
-#include "AnsiEscSeq.hpp"
-
-using std::cout;
-using std::endl;
-using std::string;
-
-
-class Brain {
+class IMateriaSource {
 	public:
-		string *ideas[100]; //Array of pointers to strings representing brain ideas
-
-		Brain(); // Default constructor
-		Brain(const Brain &copy); // Copy constructor
-		Brain &operator=(const Brain &copy); //Copy assignment operator
-		virtual ~Brain(); // Destructor
+		virtual ~IMateriaSource() {} //Destructor
+		virtual void learnMateria(AMateria*) = 0; //Learn a Materia
+		virtual AMateria* createMateria(std::string const & type) = 0; //Create a Materia
 };
 
 

@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 00:20:30 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/19 22:39:40 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/19 22:55:11 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Dog::Dog() {
 	dogBrain = new Brain();
 }
 
-Dog::Dog(const Dog &copy) : Animal(copy) {
+Dog::Dog(const Dog &copy) : AAnimal(copy) {
 	cout << BLUE_BB << "A Dog has been born from a copy!" << RESET << endl;
 	type = copy.type;
 	dogBrain = copy.dogBrain;

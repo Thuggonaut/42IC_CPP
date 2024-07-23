@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 00:20:28 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/19 22:39:09 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/19 22:52:46 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #define DOG_HPP
 
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
 
-class Dog : public Animal {
+class Dog : public AAnimal {
 	private:
 		Brain *dogBrain;
 

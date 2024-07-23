@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,30 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef AANIMAL_HPP
+#define AANIMAL_HPP
 
 
 #include <iostream>
+#include <type_traits>
 #include "AnsiEscSeq.hpp"
 
 using std::string;
 using std::cout;
 using std::endl;
+using std::is_abstract;
 
 
-class Animal {
+class AAnimal {
 	protected:
 	    string type; 
 	
 	public:
-		Animal(); //Default constructor
-		Animal(const Animal &copy); //Copy constructor
-		Animal &operator=(const Animal &copy); //Copy assignment operator
-		virtual ~Animal(); //Destructor
+		AAnimal(); 
+		AAnimal(const AAnimal &copy);  
+		AAnimal &operator=(const AAnimal &copy); 
+		virtual ~AAnimal();  
 		
-		virtual void makeSound() const; //Virtual for derivatives to inherit and implement
-		string getType() const; //Getter for type
+		virtual void makeSound() const = 0; //Pure virtual function to make class abstract
+		string getType() const; 
 };
 
 
