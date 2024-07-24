@@ -7,7 +7,7 @@ RM			=	rm -rf
 all: 		$(NAME)
 
 $(NAME): 	$(SRC)
-			$(CXX) $(CXXFLAGS) $^ -o $@
+			@$(CXX) $(CXXFLAGS) $^ -o $@
 
 clean:
 			$(RM) $(NAME)

@@ -74,24 +74,20 @@ void PhoneBook::printContacts() {
 	
 	for (int i = 0; i < contactCount; ++i) {
 		cout << " | " << setw(10) << i + 1 << " | "
-			<< setw(10) << formatString(contacts[i].firstName) << " | "
-			<< setw(10) << formatString(contacts[i].lastName) << " | "
-			<< setw(10) << formatString(contacts[i].nickname) << " | " << endl;
+			<< setw(10) << formatString(contacts[i].getFirst()) << " | "
+			<< setw(10) << formatString(contacts[i].getLast()) << " | "
+			<< setw(10) << formatString(contacts[i].getNick()) << " | " << endl;
 	}
 }
 
 //Display selected contact
 void PhoneBook::printSpecific(int index) {
-	if (index < 1 || index > contactCount) {
-		cout << RED << "Invalid index" << RESET << endl;
-		return ;
-	}
 	Contact &contact = contacts[index - 1];
-	cout << CYAN << "First name: " << RESET << contact.firstName << endl;
-	cout << CYAN << "Last name: " << RESET << contact.lastName << endl;
-	cout << CYAN << "Nickname: " << RESET << contact.nickname << endl;
-	cout << CYAN << "Phone number: " << RESET << contact.phoneNo << endl;
-	cout << CYAN << "Darkest secret: " << RESET << contact.darkestSecret << endl;
+	cout << CYAN << "First name: " << RESET << contact.getFirst()<< endl;
+	cout << CYAN << "Last name: " << RESET << contact.getLast() << endl;
+	cout << CYAN << "Nickname: " << RESET << contact.getNick()<< endl;
+	cout << CYAN << "Phone number: " << RESET << contact.getPhoneNo() << endl;
+	cout << CYAN << "Darkest secret: " << RESET << contact.getSecret() << endl;
 }
 
 void clPrompt() {
@@ -128,6 +124,10 @@ int main()
 					int index;
 					cout << YELLOW << "Enter the index of the contact you want displayed: " << RESET;
 					cin >> index;
+					if (index < 1 || index > myPhoneBook.contactCount) {
+						cout << RED << "Invalid index, program terminating" << RESET << endl;
+						return (1);
+					}
 					myPhoneBook.printSpecific(index);
 				}
 				else 
@@ -138,3 +138,11 @@ int main()
 
 	return (0);
 }
+
+//Getters
+
+string Contact::getFirst() const { return firstName; }
+string Contact::getLast() const { return lastName; }
+string Contact::getNick() const { return nickname; }
+string Contact::getPhoneNo() const { return phoneNo; }
+string Contact::getSecret() const { return darkestSecret; }

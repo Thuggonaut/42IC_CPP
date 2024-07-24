@@ -36,15 +36,22 @@ using std::setw;
 
 //Class definitions
 class Contact {
-	public:
+	private:
 		string firstName;
 		string lastName;
 		string nickname;
 		string phoneNo;
 		string darkestSecret;
 
+	public:
 		Contact();
 		Contact(string firstName, string lastName, string nickname, string phoneNo, string darkestSecret);
+
+		string getFirst() const;
+		string getLast() const;
+		string getNick() const;
+		string getPhoneNo() const;
+		string getSecret() const;
 };
 
 class PhoneBook {

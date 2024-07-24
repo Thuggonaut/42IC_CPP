@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 00:17:32 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/17 21:17:58 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/24 23:04:07 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class ScavTrap : public ClapTrap { //Declare a derived class from ClapTrap
 
 		void attack(const string &target); //Display different attack message
 		void guardGate(); //Member function specific to ScavTrap
-
 };
 
 

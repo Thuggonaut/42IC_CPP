@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 21:48:57 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/11 01:18:13 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/24 22:51:29 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,22 +43,22 @@ void Harl::complain(LogLevel level) {
 		    error();
 			break;
 		default:
-			cout << "[ Probably complaining about insignificant problems ]" << endl;
+			cout << "[ Probably complaining about insignificant problems ]" << endl << endl;
 	}
 }
 
 void Harl::debug() {
-	cout << "[ DEBUG ]" << endl << "Dude, where's my car? I'm a Harl, not a car!" << endl;
+	cout << "[ DEBUG ]" << endl << "Dude, where's my car? I'm a Harl, not a car!" << endl << endl;
 }
 
 void Harl::info() {
-	cout << "[ INFO ]" << endl << "I can't believe I lost my car! I hate taking public transportation!" << endl;
+	cout << "[ INFO ]" << endl << "I can't believe I lost my car! I hate taking public transportation!" << endl << endl;
 }
 
 void Harl::warning() {
-	cout << "[ WARNING ]" << endl << "I've lost my car again! I'm going to go bat shit crazy!" << endl;
+	cout << "[ WARNING ]" << endl << "I've lost my car again! I'm going to go bat shit crazy!" << endl << endl;
 }
 
 void Harl::error() {
-	cout << "[ ERROR ]" << endl << "I lost my car and I am now discombobulated!" << endl;
+	cout << "[ ERROR ]" << endl << "I lost my car and I am now discombobulated!" << endl << endl;
 }

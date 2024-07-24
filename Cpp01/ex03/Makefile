@@ -13,7 +13,7 @@ OBJ 		= 	$(patsubst $(SRC_DIR)%.cpp, $(OBJ_DIR)%.o, $(SRCS))
 all: 			$(NAME)
 
 $(NAME): 		$(OBJ)
-				$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+				@$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 $(OBJ_DIR)%.o:	$(SRC_DIR)%.cpp 
 				@mkdir -p $(@D)

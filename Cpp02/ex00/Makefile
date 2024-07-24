@@ -7,7 +7,7 @@ SRC 		= Fixed.cpp main.cpp
 all: 			$(NAME)
 
 $(NAME): 		$(SRC)
-				$(CXX) $(CXXFLAGS) $^ -o $@
+				@$(CXX) $(CXXFLAGS) $^ -o $@
 
 clean:
 				@$(RM) $(NAME)

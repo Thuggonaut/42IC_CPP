@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 14:34:48 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/09 15:02:15 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/24 22:22:14 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ class Zombie {
 		string name;
 
 	public:
-		Zombie();
-		Zombie(string name);
-		~Zombie();
-		void announce();
+		Zombie(); //Default constructor
+		Zombie(string name); //Constructor with a name parameter
+		~Zombie(); //Destructor
+		void announce(); //Announce function
 };
 
 Zombie *newZombie(string name);
