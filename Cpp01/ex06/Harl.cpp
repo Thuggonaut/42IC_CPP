@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 21:48:57 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/24 22:51:29 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/25 21:48:07 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,32 @@
 
 //Initialize static member variables
 Harl::LogLevel Harl::getLevel(const string &level) { //Harl::LogLevel is a return type of getLevel()
-	if (level == "DEBUG" || level == "debug") return (LogLevel::DEBUG);
-	if (level == "INFO" || level == "info") return (LogLevel::INFO);
-	if (level == "WARNING" || level == "warning") return (LogLevel::WARNING);
-	if (level == "ERROR" || level == "error") return (LogLevel::ERROR);
-	else return (LogLevel::UNKNOWN);
+	if (level == "DEBUG" || level == "debug") return (DEBUG);
+	if (level == "INFO" || level == "info") return (INFO);
+	if (level == "WARNING" || level == "warning") return (WARNING);
+	if (level == "ERROR" || level == "error") return (ERROR);
+	else return (UNKNOWN);
 }
 
 //Determine which complaint to log based on the given LogLevel
 void Harl::complain(LogLevel level) {
 	switch (level) {
-		case (LogLevel::DEBUG):
+		case (DEBUG):
 			debug();
 			info();
 			warning();
 			error();
 			break;
-		case (LogLevel::INFO):
+		case (INFO):
 			info();
 			warning();
 			error();
 			break;
-		case (LogLevel::WARNING):
+		case (WARNING):
 		    warning();
 			error();
 			break;
-		case (LogLevel::ERROR):
+		case (ERROR):
 		    error();
 			break;
 		default:
