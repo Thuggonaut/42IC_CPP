@@ -15,13 +15,11 @@
 
 
 #include <iostream>
-#include <type_traits>
 #include "AnsiEscSeq.hpp"
 
 using std::string;
 using std::cout;
 using std::endl;
-using std::is_abstract;
 
 
 class AAnimal {

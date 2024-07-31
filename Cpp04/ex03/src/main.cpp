@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 16:13:30 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/23 22:39:12 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/31 17:11:45 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 #include "../inc/Character.hpp"
 
 
-/*
+//Test provided by subject
+
 int main()
 {
 	IMateriaSource* src = new MateriaSource(); //Create a new MateriaSource `src`
@@ -39,7 +40,7 @@ int main()
 	delete src; //Delete the MateriaSource to avoid memory leaks
 	return 0;
 }
-*/
+
 
 /*
 Should output:
@@ -51,6 +52,7 @@ $> ./a.out | cat -e
 
 //Implement more tests...
 
+/*
 int main()
 {
 	IMateriaSource *src = new MateriaSource();
@@ -85,5 +87,5 @@ int main()
 	delete src;
 	return (0);
 }
-
+*/
 

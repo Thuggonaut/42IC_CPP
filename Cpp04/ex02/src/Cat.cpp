@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 00:09:00 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/19 22:54:51 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:59:11 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ Cat::Cat() {
 Cat::Cat(const Cat &copy) : AAnimal(copy) {
 	cout << MAGENTA_BB << "A Cat has been born from a copy!" << RESET << endl;
 	type = copy.type; 
-	catBrain = copy.catBrain;
+	catBrain = new Brain(*copy.catBrain);
 }
 
 Cat &Cat::operator=(const Cat &copy) {
-	//cout << MAGENTA_BB << "A clone of a Cat has been assigned!" << RESET << endl;
+	cout << MAGENTA_BB << "A clone of a Cat has been assigned!" << RESET << endl;
 	if (this != &copy) {
         type = copy.type; 
-		catBrain = copy.catBrain;
+		catBrain = new Brain(*copy.catBrain);
 	}
     return (*this);
 }

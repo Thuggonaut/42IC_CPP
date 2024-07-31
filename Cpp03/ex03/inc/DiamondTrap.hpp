@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 01:59:03 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/17 22:03:40 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/30 20:19:57 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
+
+//Implementation of DiamondTrap class that uses virtual inheritance
+//This is done by setting the ScavTrap and FragTrap classes as "virtual public"
+//This prevents the DiamondTrap class from inheriting the ClapTrap class twice
 
 class DiamondTrap : public ScavTrap, public FragTrap { //Ensure the initializations in the implementations are in the same order
 	private:

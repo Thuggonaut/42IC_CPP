@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 18:07:31 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/23 22:30:29 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/31 17:53:52 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ Character::Character(const string &name) : name(name) {
 Character::Character(const Character &copy) : name(copy.name) {
 	cout << YELLOW << "Character copy constructor called for " << name << endl;
 	for (int i = 0; i < 4; i++) {
-		inventory[i] = copy.inventory[i]; //Copy the inventory
-		floor[i] = copy.floor[i]; //Copy the floor
+		inventory[i] = copy.inventory[i] ? copy.inventory[i]->clone() : NULL; //Deep copy of the inventory ensuring unique Materia objects
+		floor[i] = copy.floor[i] ? copy.floor[i]->clone() : NULL; //Deep copy of the floor ensuring unique Materia objects
 	}
 } 
 
@@ -35,8 +35,8 @@ Character &Character::operator=(const Character &copy) {
 		for (int i = 0; i < 4; i++) {
 			delete inventory[i]; //Delete existing Materia before new Materia are created
 			delete floor[i]; //Delete existing Materia before new Materia are created
-			inventory[i] = copy.inventory[i]; //Copy the new Materia into the inventory
-			floor[i] = copy.floor[i]; //Copy the new Materia into the floor
+			inventory[i] = copy.inventory[i] ? copy.inventory[i]->clone() : NULL; //Deep copy of the inventory ensuring unique Materia objects
+			floor[i] = copy.floor[i] ? copy.floor[i]->clone() : NULL; //Deep copy of the floor ensuring unique Materia objects
 		}
 	}
 	return (*this);

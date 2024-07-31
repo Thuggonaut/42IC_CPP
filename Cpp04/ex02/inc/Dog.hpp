@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 00:20:28 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/19 22:52:46 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:58:35 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Dog : public AAnimal {
 		Dog(); 
 		Dog(const Dog &copy);
 		Dog &operator=(const Dog &copy);
-		~Dog();
+		virtual ~Dog();
 
 		void makeSound() const;
 		Brain *getBrain() const; //Return a pointer to the Dog's Brain object

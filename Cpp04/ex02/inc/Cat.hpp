@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 00:09:02 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/19 22:52:26 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/31 16:58:27 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Cat : public AAnimal {
 		Cat(); 
 		Cat(const Cat &copy);
 		Cat &operator=(const Cat &copy);
-		~Cat();
+		virtual ~Cat();
 
 		void makeSound() const;
 		Brain *getBrain() const; //Returns a pointer to the Cat's Brain object

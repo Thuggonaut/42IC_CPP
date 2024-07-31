@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 22:43:19 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/21 15:57:31 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/07/31 17:09:07 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,7 @@ return 0;
 
 int main() 
 {
-	if (is_abstract<AAnimal>::value)
-		cout << GREEN_BB << "AAnimal class is abstract" << RESET << endl;
-	else
-		cout << RED_BB << "AAnimal class is not abstract" << RESET << endl;
+	//AAnimal test; //Compile error due to abstract class
 	
 	AAnimal *array[6]; //Declare an array of 6 animals
 

@@ -44,6 +44,7 @@ void PhoneBook::addContact() {
 
 	if (contactCount >= 8) {
 		cout << RED << "Phonebook is full" << RESET << endl;
+		//todo replace oldest contact with new contact
 		return ;
 	}
 

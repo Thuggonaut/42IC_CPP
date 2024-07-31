@@ -75,3 +75,8 @@
 🧐 ***What is a deep copy?***
 - A deep copy means that when a copy of an object is created, it should also create copies of the objects that it points to, ensuring that any changes to the copied object does not affect the original object.
 - This is achieved by implementing a copy constructor and assignment operator that perform a deep copy.
+
+🧐 ***Why virtual destructors?***
+- When you delete an object through a pointer to a base class (like Animal*), a virtual destructor ensures that the correct destructor is called for the actual derived type.
+- Without virtual destructors, only the base class destructor would be called, potentially leading to memory leaks or undefined behavior.
+- Virtual destructors allow for proper cleanup of resources in derived classes when objects are deleted through base class pointers.
