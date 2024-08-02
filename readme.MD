@@ -7,7 +7,7 @@
 
 # General rules:
 - Must comply with `C++ 98 standard`.
-- Compile with `g++` and the flags `-std=c++98 -Wall -Wextra -Werror`.
+- Compile with `c++` and the flags `-std=c++98 -Wall -Wextra -Werror`.
 - Write `class names in UpperCamelCase` format.
 	- Files containing class code will always be named according to the class name.
 	- For instance: `ClassName.hpp/ClassName.h`, `ClassName.cpp`, or `ClassName.tpp`. 
