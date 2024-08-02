@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 00:17:32 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/17 21:16:56 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/08/02 19:44:16 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,8 @@ class ScavTrap : virtual public ClapTrap { //Declare virtual inheritance from Cl
 		ScavTrap &operator=(ScavTrap const &copy); //Copy assignment operator
 		~ScavTrap(); //Destructor
 
-		void attack(const string &target); //Display different attack message
+		void attack(const ClapTrap &target); //Display different attack message
 		void guardGate(); //Member function specific to ScavTrap
-
 };
 
 

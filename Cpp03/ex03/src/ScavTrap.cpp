@@ -6,7 +6,7 @@
 /*   By: tquemato <tquemato@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 00:17:36 by tquemato          #+#    #+#             */
-/*   Updated: 2024/07/17 21:17:22 by tquemato         ###   ########.fr       */
+/*   Updated: 2024/08/02 19:40:34 by tquemato         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,13 @@ ScavTrap::~ScavTrap() {
 }
 
 //Overidden attack function
-void ScavTrap::attack(const string &target) {
+void ScavTrap::attack(const ClapTrap &target) {
 	if (hitPoints <= 0) {
 		cout << name << " is dry of hit points, it cannot tickle!" << endl;
 		return ;
 	}
 	else {
-		cout << name << " tickles " << target << " causing " << attackDamage << " points of damage!" << endl;
+		cout << name << " tickles " << target.getName() << " causing " << attackDamage << " points of damage!" << endl;
 		energyPoints--;
 		cout << name << " has " << energyPoints << " energy points remaining." << endl;
 	}
